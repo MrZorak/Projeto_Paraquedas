@@ -6,7 +6,7 @@ public class PlayerMovimento : MonoBehaviour {
 
 	public Vector2 startPos;
 	public Vector2 direction;
-	float currentOffset = -17.8f;
+    float currentOffset = -17.20f;
 	public GameObject StraightRoad;
 	Vector3 posicao;
 	SkinnedMeshRenderer Skin;
@@ -72,7 +72,7 @@ public class PlayerMovimento : MonoBehaviour {
 			Vector3 spawnPosition = StraightRoad.transform.position + localOffset;
 			StraightRoad.transform.rotation = Quaternion.Euler (0f, 0f, 0f);
 			Instantiate(StraightRoad, spawnPosition, StraightRoad.transform.rotation); //instantiate first new block, this works fine
-			currentOffset -= 17.88f;
+			currentOffset -= 17.28f;
 					
 		}
 		if (other.tag == "Obstaculo") {
